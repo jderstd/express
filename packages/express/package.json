@@ -1,0 +1,51 @@
+{
+    "name": "@jderstd/express",
+    "version": "0.1.0",
+    "description": "A response builder for Express",
+    "keywords": [
+        "jder",
+        "express",
+        "response",
+        "ts",
+        "typescript",
+        "js",
+        "javascript"
+    ],
+    "homepage": "https://github.com/jderstd/express",
+    "bugs": "https://github.com/jderstd/express/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jderstd/express.git",
+        "directory": "packages/express"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Alpheus",
+        "email": "contact@alphe.us"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "main": "./dist/response.js",
+    "module": "./dist/response.mjs",
+    "types": "./dist/response.d.ts",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "@jderstd/core": "~0.4.0"
+    },
+    "devDependencies": {
+        "@types/express": "catalog:dev",
+        "express": "catalog:dev"
+    },
+    "peerDependencies": {
+        "@types/express": "catalog:peer",
+        "express": "catalog:peer"
+    }
+}

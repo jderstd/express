@@ -1,0 +1,23 @@
+version: 2
+updates:
+    - package-ecosystem: "npm"
+      directory: "/"
+      schedule:
+          interval: "daily"
+          time: "00:00"
+          timezone: "Etc/UTC"
+      allow:
+          - dependency-name: "@apst/biome"
+          - dependency-name: "@apst/tsconfig"
+          - dependency-name: "@biomejs/biome"
+          - dependency-name: "@types/node"
+          - dependency-name: "nodemon"
+          - dependency-name: "tsdown"
+          - dependency-name: "typedoc"
+          - dependency-name: "typedoc-plugin-markdown"
+          - dependency-name: "typescript"
+          - dependency-name: "vitest"
+      cooldown:
+          default-days: 1
+          include:
+              - "*"

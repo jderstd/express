@@ -1,0 +1,24 @@
+{
+    "name": "example-express-js",
+    "private": true,
+    "scripts": {
+        "dev": "node",
+        "build": "tsdown -c tsdown.config.js",
+        "start": "node ./dist/index.js",
+        "": ""
+    },
+    "nodemonConfig": {
+        "watch": [
+            "src"
+        ],
+        "exec": "tsdown -c tsdown.config.js && node ./dist/index.js",
+        "ext": "ts,js,json"
+    },
+    "dependencies": {
+        "@jderstd/express": "workspace:*",
+        "express": "catalog:dev"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.10"
+    }
+}

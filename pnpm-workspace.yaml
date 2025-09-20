@@ -1,0 +1,19 @@
+packages:
+    - ./packages/*
+    - ./tests/*
+    - ./examples/*
+
+catalogs:
+    dev:
+        "@types/express": ~5.0.0
+        express: 5.0.0
+    peer:
+        "@types/express": ^5.0.0
+        express: ^5.0.0
+
+minimumReleaseAge: 1440
+
+minimumReleaseAgeExclude:
+    - "@apst/biome"
+    - "@apst/tsconfig"
+    - "@jderstd/core"
