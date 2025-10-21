@@ -6,7 +6,7 @@
 function createJsonResponse<D>(res, options?): Response<any, Record<string, any>>;
 ```
 
-Defined in: [packages/express/src/response/json/index.ts:105](https://github.com/jderstd/express/blob/952851c3a78271c3a9f672e3b1c957e81ef217cb/packages/express/src/response/json/index.ts#L105)
+Defined in: [packages/express/src/response/json/index.ts:105](https://github.com/jderstd/express/blob/dc8e23ecb252a7c584d782d1594902f4da1ae110/packages/express/src/response/json/index.ts#L105)
 
 Create a JSON response with context.
 

@@ -2,7 +2,7 @@
 
 # Enumeration: ResponseErrorCode
 
-Defined in: [packages/express/src/response/error/index.ts:4](https://github.com/jderstd/express/blob/952851c3a78271c3a9f672e3b1c957e81ef217cb/packages/express/src/response/error/index.ts#L4)
+Defined in: [packages/express/src/response/error/index.ts:4](https://github.com/jderstd/express/blob/dc8e23ecb252a7c584d782d1594902f4da1ae110/packages/express/src/response/error/index.ts#L4)
 
 Response error code.
 
@@ -14,7 +14,7 @@ Response error code.
 Server: "server";
 ```
 
-Defined in: [packages/express/src/response/error/index.ts:10](https://github.com/jderstd/express/blob/952851c3a78271c3a9f672e3b1c957e81ef217cb/packages/express/src/response/error/index.ts#L10)
+Defined in: [packages/express/src/response/error/index.ts:10](https://github.com/jderstd/express/blob/dc8e23ecb252a7c584d782d1594902f4da1ae110/packages/express/src/response/error/index.ts#L10)
 
 Internal server error.
 

@@ -6,7 +6,7 @@
 function errorRequestHandler(options?): ErrorRequestHandler;
 ```
 
-Defined in: [packages/express/src/middlewares/error.ts:86](https://github.com/jderstd/express/blob/952851c3a78271c3a9f672e3b1c957e81ef217cb/packages/express/src/middlewares/error.ts#L86)
+Defined in: [packages/express/src/middlewares/error.ts:86](https://github.com/jderstd/express/blob/dc8e23ecb252a7c584d782d1594902f4da1ae110/packages/express/src/middlewares/error.ts#L86)
 
 Error request handler.
 

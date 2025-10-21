@@ -6,7 +6,7 @@
 function getResponseErrorMessage(code): string;
 ```
 
-Defined in: [packages/express/src/response/error/index.ts:16](https://github.com/jderstd/express/blob/952851c3a78271c3a9f672e3b1c957e81ef217cb/packages/express/src/response/error/index.ts#L16)
+Defined in: [packages/express/src/response/error/index.ts:16](https://github.com/jderstd/express/blob/dc8e23ecb252a7c584d782d1594902f4da1ae110/packages/express/src/response/error/index.ts#L16)
 
 Get response error message by code.
 
