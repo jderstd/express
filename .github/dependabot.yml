@@ -17,6 +17,8 @@ updates:
           - dependency-name: "typedoc-plugin-markdown"
           - dependency-name: "typescript"
           - dependency-name: "vitest"
+      commit-message:
+          prefix: "chore"
       cooldown:
           default-days: 1
           include:
