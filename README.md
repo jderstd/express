@@ -36,6 +36,10 @@ please refer to the [documentation](./docs/express/README.md).
 For the package APIs, 
 please refer to the [APIs](./apis/express/README.md).
 
+## Contributing
+
+For contributing, please refer to the [contributing guide](./CONTRIBUTING.md).
+
 ## License
 
 This project is licensed under the terms of the MIT license.
