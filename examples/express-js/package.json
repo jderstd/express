@@ -19,6 +19,6 @@
         "express": "catalog:dev"
     },
     "devDependencies": {
-        "nodemon": "^3.1.11"
+        "nodemon": "catalog:example"
     }
 }

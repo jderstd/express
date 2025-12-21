@@ -1,3 +1,4 @@
+import type { JsonResponse } from "@jderstd/core";
 import type { CreateJsonResponseStructOptions } from "@jderstd/core/response/json/struct";
 import type { Response } from "express";
 
@@ -105,7 +106,7 @@ type CreateJsonResponseOptions<D = unknown> =
 const createJsonResponse = <D = unknown>(
     res: Response,
     options?: CreateJsonResponseOptions<D>,
-) => {
+): Response<JsonResponse<D>, Record<string, any>> => {
     const { status, headers, json } = createJsonResponseStruct<D>(options);
     return res.status(status).setHeaders(new Map(headers)).json(json);
 };

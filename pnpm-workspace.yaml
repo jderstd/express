@@ -10,10 +10,13 @@ catalogs:
     peer:
         "@types/express": ^5.0.0
         express: ^5.0.0
+    example:
+        nodemon: ^3
 
 minimumReleaseAge: 1440
 
 minimumReleaseAgeExclude:
     - "@apst/biome"
     - "@apst/tsconfig"
+    - "@apst/tsdown"
     - "@jderstd/core"

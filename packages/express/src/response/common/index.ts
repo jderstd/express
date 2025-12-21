@@ -75,7 +75,7 @@ type CreateResponseOptions<B extends BodyInit = BodyInit> =
 const createResponse = <B extends BodyInit>(
     res: Response,
     options?: CreateResponseOptions<B>,
-) => {
+): Response<B, Record<string, any>> => {
     const { status, headers, body } = createResponseStruct(options);
     return res.status(status).setHeaders(new Map(headers)).send(body);
 };
