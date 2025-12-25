@@ -1,6 +1,7 @@
 export type {
     JsonResponse,
     JsonResponseError,
+    JsonResponseErrorInput,
 } from "@jderstd/core";
 
 export type { ErrorRequestHandlerOptions } from "#/middlewares/error";

@@ -44,6 +44,8 @@ describe("createJsonResponse test", (): void => {
 
         expect(JSON.parse(res.text)).toStrictEqual({
             success: true,
+            data: null,
+            errors: [],
         } satisfies JsonResponse);
     });
 
@@ -57,6 +59,7 @@ describe("createJsonResponse test", (): void => {
             data: {
                 message: "Hello, World!",
             },
+            errors: [],
         } satisfies JsonResponse);
     });
 
@@ -67,9 +70,12 @@ describe("createJsonResponse test", (): void => {
 
         expect(JSON.parse(res.text)).toStrictEqual({
             success: false,
+            data: null,
             errors: [
                 {
                     code: "server",
+                    path: [],
+                    message: null,
                 },
             ],
         } satisfies JsonResponse);
@@ -86,6 +92,8 @@ describe("createJsonResponse test", (): void => {
 
         expect(JSON.parse(res.text)).toStrictEqual({
             success: true,
+            data: null,
+            errors: [],
         } satisfies JsonResponse);
     });
 });

@@ -31,6 +31,8 @@ describe("errorRequestHandler test", (): void => {
 
         expect(JSON.parse(res.text)).toStrictEqual({
             success: true,
+            data: null,
+            errors: [],
         } satisfies JsonResponse);
     });
 
@@ -41,9 +43,11 @@ describe("errorRequestHandler test", (): void => {
 
         expect(JSON.parse(res.text)).toStrictEqual({
             success: false,
+            data: null,
             errors: [
                 {
                     code: "server",
+                    path: [],
                     message: "Goodbye, World!",
                 },
             ],
