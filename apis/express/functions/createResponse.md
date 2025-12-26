@@ -3,10 +3,10 @@
 # Function: createResponse()
 
 ```ts
-function createResponse<B>(res, options?): Response<any, Record<string, any>>;
+function createResponse<B>(res, options?): Response<B, Record<string, any>>;
 ```
 
-Defined in: [packages/express/src/response/common/index.ts:75](https://github.com/jderstd/express/blob/dc8e23ecb252a7c584d782d1594902f4da1ae110/packages/express/src/response/common/index.ts#L75)
+Defined in: [packages/express/src/response/common/index.ts:75](https://github.com/jderstd/express/blob/50e254af7196cadb4280164f2cdb86c97b55ba12/packages/express/src/response/common/index.ts#L75)
 
 Create a response.
 
@@ -90,4 +90,4 @@ const route = (req: Request, res: Response): void => {
 
 ## Returns
 
-`Response`\<`any`, `Record`\<`string`, `any`\>\>
+`Response`\<`B`, `Record`\<`string`, `any`\>\>

@@ -6,7 +6,7 @@
 type CreateResponseOptions<B> = CreateResponseStructOptions<B>;
 ```
 
-Defined in: [packages/express/src/response/common/index.ts:7](https://github.com/jderstd/express/blob/dc8e23ecb252a7c584d782d1594902f4da1ae110/packages/express/src/response/common/index.ts#L7)
+Defined in: [packages/express/src/response/common/index.ts:7](https://github.com/jderstd/express/blob/50e254af7196cadb4280164f2cdb86c97b55ba12/packages/express/src/response/common/index.ts#L7)
 
 Options of `createResponse` function.
 

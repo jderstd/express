@@ -1,6 +1,6 @@
 [< Back](./../../README.md)
 
-# @jderstd/express v0.1.0
+# @jderstd/express v0.2.0
 
 ## Enumerations
 
@@ -17,6 +17,7 @@
 | [ErrorRequestHandlerOptions](type-aliases/ErrorRequestHandlerOptions.md) | Options for `errorRequestHandler` function. |
 | [JsonResponse](type-aliases/JsonResponse.md) | JSON response. |
 | [JsonResponseError](type-aliases/JsonResponseError.md) | JSON response error. |
+| [JsonResponseErrorInput](type-aliases/JsonResponseErrorInput.md) | Input type for JSON response error. |
 
 ## Functions
 
