@@ -20,7 +20,7 @@
     },
     "devDependencies": {
         "@types/express": "catalog:dev",
-        "@types/node": "^25.0.8",
+        "@types/node": "^25.0.9",
         "nodemon": "catalog:example"
     }
 }
