@@ -1,12 +1,14 @@
 set shell := ["bash", "-cu"]
-set windows-shell := ["powershell"]
+set windows-shell := ["pwsh", "-Command"]
 
-node_bin := "./node_modules/.bin/"
-tsc := node_bin + "tsc"
-biome := node_bin + "biome"
-tsdown := node_bin + "tsdown"
-vitest := node_bin + "vitest"
-typedoc := node_bin + "typedoc"
+tsc := "pnpm exec tsgo"
+biome := "pnpm exec biome"
+tsdown := "pnpm exec tsdown"
+vitest := "pnpm exec vitest"
+typedoc := "pnpm exec typedoc"
+publish := "pnpm publish"
+
+lsl_cfg := "-config ../../.ls-lint.yaml"
 
 express := "packages/express"
 
@@ -26,23 +28,35 @@ _:
 i:
     pnpm install
 
+# Lint code with ls-lint
+lslint:
+    cd ./{{express}} && ls-lint {{lsl_cfg}}
+
+# Lint code with TypeScript Compiler
+tsc:
+    cd ./{{express}} && {{tsc}} --noEmit
+
 # Lint code
 lint:
-    ls-lint
+    just lslint
     typos
-    cd ./{{express}} && ../../{{tsc}} --noEmit
+    just tsc
+
+# Lint code with Biome
+lint-biome:
+    {{biome}} lint .
 
 # Format code
 fmt:
-    ./{{biome}} check --write .
+    {{biome}} check --write .
 
 # Build package
 build:
-    cd ./{{express}} && ../../{{tsdown}} -c tsdown.config.ts
+    cd ./{{express}} && {{tsdown}} -c tsdown.config.ts
 
 # Run tests
 test:
-    cd ./{{test_express}} && ./{{vitest}} run
+    cd ./{{test_express}} && {{vitest}} run
 
 # Run tests with different runtimes
 test-all:
@@ -52,11 +66,11 @@ test-all:
 
 # Generate APIs documentation
 api:
-    cd ./{{express}} && ../../{{typedoc}}
+    cd ./{{express}} && {{typedoc}}
 
 # Publish express package as dry-run
 publish-try-express:
-    cd ./{{express}} && pnpm publish --no-git-checks --dry-run
+    cd ./{{express}} && {{publish}} --no-git-checks --dry-run
 
 # Publish all packages as dry-run
 publish-try:
@@ -64,7 +78,7 @@ publish-try:
 
 # Publish express package
 publish-express:
-    cd ./{{express}} && pnpm publish
+    cd ./{{express}} && {{publish}}
 
 # Publish all packages
 publish:
@@ -72,19 +86,18 @@ publish:
 
 # Clean builds
 clean:
-    rm -rf ./{{example_js}}/dist
-    rm -rf ./{{example_ts}}/dist
-    rm -rf ./{{express}}/dist
+    rm -rf ./examples/*/dist
+
+    rm -rf ./packages/*/dist
 
 # Clean everything
 clean-all:
     just clean
     
-    rm -rf ./{{example_js}}/node_modules
-    rm -rf ./{{example_ts}}/node_modules
+    rm -rf ./examples/*/node_modules
 
-    rm -rf ./{{test_express}}/node_modules
+    rm -rf ./tests/*/node_modules
 
-    rm -rf ./{{express}}/node_modules
+    rm -rf ./packages/*/node_modules
     
     rm -rf ./node_modules
