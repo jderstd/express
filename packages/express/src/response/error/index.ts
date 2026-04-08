@@ -21,4 +21,4 @@ const getResponseErrorMessage = (code: ResponseErrorCode): string => {
     }
 };
 
-export { ResponseErrorCode, getResponseErrorMessage };
+export { getResponseErrorMessage, ResponseErrorCode };
