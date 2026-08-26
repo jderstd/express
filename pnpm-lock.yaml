@@ -56,7 +56,7 @@ importers:
         version: link:../../packages/express
       express:
         specifier: catalog:dev
-        version: 5.0.0
+        version: 5.0.0(supports-color@5.5.0)
     devDependencies:
       nodemon:
         specifier: catalog:example
@@ -69,14 +69,14 @@ importers:
         version: link:../../packages/express
       express:
         specifier: catalog:dev
-        version: 5.0.0
+        version: 5.0.0(supports-color@5.5.0)
     devDependencies:
       '@types/express':
         specifier: catalog:dev
         version: 5.0.3
       '@types/node':
-        specifier: ^26.2.0
-        version: 26.2.0
+        specifier: ^26.3.0
+        version: 26.3.0
       nodemon:
         specifier: catalog:example
         version: 3.1.11
@@ -92,7 +92,7 @@ importers:
         version: 5.0.3
       express:
         specifier: catalog:dev
-        version: 5.0.0
+        version: 5.0.0(supports-color@5.5.0)
 
   tests/express:
     dependencies:
@@ -107,13 +107,13 @@ importers:
         version: 6.0.3
       express:
         specifier: catalog:dev
-        version: 5.0.0
+        version: 5.0.0(supports-color@5.5.0)
       supertest:
         specifier: ^7.1.4
-        version: 7.1.4
+        version: 7.1.4(supports-color@5.5.0)
       vitest:
         specifier: ^4.1.11
-        version: 4.1.11(@types/node@26.2.0)(yaml@2.9.0)
+        version: 4.1.11(@types/node@26.3.0)(yaml@2.9.0)
 
 packages:
 
@@ -520,8 +520,8 @@ packages:
   '@types/mime@1.3.5':
     resolution: {integrity: sha512-/pyBZWSLD2n0dcHE3hq8s8ZvcETHtEuF+3E7XVt0Ig2nvsVQXdghHVcEkIWjy9A0wKfTn97a/PSDYohKIlnP/w==}
 
-  '@types/node@26.2.0':
-    resolution: {integrity: sha512-5IviulTZeRNp2vAJ514cc/HUlY5nZ9fCbq9DMyC52BrhFZACo3nI0R7qBxhQmo/d27NFe96ur/b7Wwxklda+kg==}
+  '@types/node@26.3.0':
+    resolution: {integrity: sha512-L3fgrnchriRC2ExBflb8j4uZZURHZfQsmQeyVzhjcHW4kkwVyo8/0h1B2MVzMTrYUJYu6G7EWs14hW/L9putqw==}
 
   '@types/qs@6.14.0':
     resolution: {integrity: sha512-eOunJqu0K1923aExK6y8p6fsihYEn/BYuQ4g0CxAAgFc4b/ZLN4CrsRZ55srTdqoiLzU2B2evC+apEIxprEzkQ==}
@@ -1799,7 +1799,7 @@ snapshots:
   '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 26.2.0
+      '@types/node': 26.3.0
 
   '@types/chai@5.2.3':
     dependencies:
@@ -1808,7 +1808,7 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 26.2.0
+      '@types/node': 26.3.0
 
   '@types/cookiejar@2.1.5': {}
 
@@ -1818,7 +1818,7 @@ snapshots:
 
   '@types/express-serve-static-core@5.0.7':
     dependencies:
-      '@types/node': 26.2.0
+      '@types/node': 26.3.0
       '@types/qs': 6.14.0
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.5
@@ -1841,7 +1841,7 @@ snapshots:
 
   '@types/mime@1.3.5': {}
 
-  '@types/node@26.2.0':
+  '@types/node@26.3.0':
     dependencies:
       undici-types: 8.3.0
 
@@ -1852,19 +1852,19 @@ snapshots:
   '@types/send@0.17.5':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 26.2.0
+      '@types/node': 26.3.0
 
   '@types/serve-static@1.15.8':
     dependencies:
       '@types/http-errors': 2.0.5
-      '@types/node': 26.2.0
+      '@types/node': 26.3.0
       '@types/send': 0.17.5
 
   '@types/superagent@8.1.9':
     dependencies:
       '@types/cookiejar': 2.1.5
       '@types/methods': 1.1.4
-      '@types/node': 26.2.0
+      '@types/node': 26.3.0
       form-data: 4.0.4
 
   '@types/supertest@6.0.3':
@@ -1914,13 +1914,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.1
 
-  '@vitest/mocker@4.1.11(vite@8.2.1(@types/node@26.2.0)(yaml@2.9.0))':
+  '@vitest/mocker@4.1.11(vite@8.2.1(@types/node@26.3.0)(yaml@2.9.0))':
     dependencies:
       '@vitest/spy': 4.1.11
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 8.2.1(@types/node@26.2.0)(yaml@2.9.0)
+      vite: 8.2.1(@types/node@26.3.0)(yaml@2.9.0)
 
   '@vitest/pretty-format@4.1.11':
     dependencies:
@@ -1980,7 +1980,7 @@ snapshots:
 
   birpc@4.0.0: {}
 
-  body-parser@2.2.0:
+  body-parser@2.2.0(supports-color@5.5.0):
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
@@ -2057,9 +2057,11 @@ snapshots:
 
   cookiejar@2.1.4: {}
 
-  debug@4.3.6:
+  debug@4.3.6(supports-color@5.5.0):
     dependencies:
       ms: 2.1.2
+    optionalDependencies:
+      supports-color: 5.5.0
 
   debug@4.4.3(supports-color@5.5.0):
     dependencies:
@@ -2125,20 +2127,20 @@ snapshots:
 
   expect-type@1.4.0: {}
 
-  express@5.0.0:
+  express@5.0.0(supports-color@5.5.0):
     dependencies:
       accepts: 2.0.0
-      body-parser: 2.2.0
+      body-parser: 2.2.0(supports-color@5.5.0)
       content-disposition: 1.0.0
       content-type: 1.0.5
       cookie: 0.6.0
       cookie-signature: 1.2.2
-      debug: 4.3.6
+      debug: 4.3.6(supports-color@5.5.0)
       depd: 2.0.0
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
-      finalhandler: 2.1.0
+      finalhandler: 2.1.0(supports-color@5.5.0)
       fresh: 2.0.0
       http-errors: 2.0.0
       merge-descriptors: 2.0.0
@@ -2150,10 +2152,10 @@ snapshots:
       proxy-addr: 2.0.7
       qs: 6.13.0
       range-parser: 1.2.1
-      router: 2.2.0
+      router: 2.2.0(supports-color@5.5.0)
       safe-buffer: 5.2.1
-      send: 1.2.0
-      serve-static: 2.2.0
+      send: 1.2.0(supports-color@5.5.0)
+      serve-static: 2.2.0(supports-color@5.5.0)
       setprototypeof: 1.2.0
       statuses: 2.0.1
       type-is: 2.0.1
@@ -2172,7 +2174,7 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  finalhandler@2.1.0:
+  finalhandler@2.1.0(supports-color@5.5.0):
     dependencies:
       debug: 4.4.3(supports-color@5.5.0)
       encodeurl: 2.0.0
@@ -2539,7 +2541,7 @@ snapshots:
       '@rolldown/binding-win32-arm64-msvc': 1.2.4
       '@rolldown/binding-win32-x64-msvc': 1.2.4
 
-  router@2.2.0:
+  router@2.2.0(supports-color@5.5.0):
     dependencies:
       debug: 4.4.3(supports-color@5.5.0)
       depd: 2.0.0
@@ -2557,7 +2559,7 @@ snapshots:
 
   semver@7.7.4: {}
 
-  send@1.2.0:
+  send@1.2.0(supports-color@5.5.0):
     dependencies:
       debug: 4.4.3(supports-color@5.5.0)
       encodeurl: 2.0.0
@@ -2573,12 +2575,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@2.2.0:
+  serve-static@2.2.0(supports-color@5.5.0):
     dependencies:
       encodeurl: 2.0.0
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 1.2.0
+      send: 1.2.0(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -2626,7 +2628,7 @@ snapshots:
 
   std-env@4.2.0: {}
 
-  superagent@10.2.3:
+  superagent@10.2.3(supports-color@5.5.0):
     dependencies:
       component-emitter: 1.3.1
       cookiejar: 2.1.4
@@ -2640,10 +2642,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  supertest@7.1.4:
+  supertest@7.1.4(supports-color@5.5.0):
     dependencies:
       methods: 1.1.2
-      superagent: 10.2.3
+      superagent: 10.2.3(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -2753,7 +2755,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@8.2.1(@types/node@26.2.0)(yaml@2.9.0):
+  vite@8.2.1(@types/node@26.3.0)(yaml@2.9.0):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.5
@@ -2761,14 +2763,14 @@ snapshots:
       rolldown: 1.2.4
       tinyglobby: 0.2.17
     optionalDependencies:
-      '@types/node': 26.2.0
+      '@types/node': 26.3.0
       fsevents: 2.3.3
       yaml: 2.9.0
 
-  vitest@4.1.11(@types/node@26.2.0)(yaml@2.9.0):
+  vitest@4.1.11(@types/node@26.3.0)(yaml@2.9.0):
     dependencies:
       '@vitest/expect': 4.1.11
-      '@vitest/mocker': 4.1.11(vite@8.2.1(@types/node@26.2.0)(yaml@2.9.0))
+      '@vitest/mocker': 4.1.11(vite@8.2.1(@types/node@26.3.0)(yaml@2.9.0))
       '@vitest/pretty-format': 4.1.11
       '@vitest/runner': 4.1.11
       '@vitest/snapshot': 4.1.11
@@ -2785,10 +2787,10 @@ snapshots:
       tinyexec: 1.3.0
       tinyglobby: 0.2.17
       tinyrainbow: 3.1.1
-      vite: 8.2.1(@types/node@26.2.0)(yaml@2.9.0)
+      vite: 8.2.1(@types/node@26.3.0)(yaml@2.9.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 26.2.0
+      '@types/node': 26.3.0
     transitivePeerDependencies:
       - '@vitejs/devtools'
       - esbuild
